@@ -74,58 +74,58 @@
 (CFunc0) SDL_lltoa,
 (CFunc0) SDL_ulltoa,
 (CFunc0) SDL_atoi,
-/*(float) (CFunc0) SDL_atof,*/
+/*[[[float ret]]] (CFunc0) SDL_atof,*/
 (CFunc0) SDL_strtol,
 (CFunc0) SDL_strtoul,
 (CFunc0) SDL_strtoll,
 (CFunc0) SDL_strtoull,
-/*(float) (CFunc0) SDL_strtod,*/
+/*[[[float ret]]] (CFunc0) SDL_strtod,*/
 (CFunc0) SDL_strcmp,
 (CFunc0) SDL_strncmp,
 (CFunc0) SDL_strcasecmp,
 (CFunc0) SDL_strncasecmp,
-/*(float) (CFunc0) SDL_acos,*/
-/*(float) (CFunc0) SDL_acosf,*/
-/*(float) (CFunc0) SDL_asin,*/
-/*(float) (CFunc0) SDL_asinf,*/
-/*(float) (CFunc0) SDL_atan,*/
-/*(float) (CFunc0) SDL_atanf,*/
-/*(float) (CFunc0) SDL_atan2,*/
-/*(float) (CFunc0) SDL_atan2f,*/
-/*(float) (CFunc0) SDL_ceil,*/
-/*(float) (CFunc0) SDL_ceilf,*/
-/*(float) (CFunc0) SDL_copysign,*/
-/*(float) (CFunc0) SDL_copysignf,*/
-/*(float) (CFunc0) SDL_cos,*/
-/*(float) (CFunc0) SDL_cosf,*/
-/*(float) (CFunc0) SDL_exp,*/
-/*(float) (CFunc0) SDL_expf,*/
-/*(float) (CFunc0) SDL_fabs,*/
-/*(float) (CFunc0) SDL_fabsf,*/
-/*(float) (CFunc0) SDL_floor,*/
-/*(float) (CFunc0) SDL_floorf,*/
-/*(float) (CFunc0) SDL_trunc,*/
-/*(float) (CFunc0) SDL_truncf,*/
-/*(float) (CFunc0) SDL_fmod,*/
-/*(float) (CFunc0) SDL_fmodf,*/
-/*(float) (CFunc0) SDL_log,*/
-/*(float) (CFunc0) SDL_logf,*/
-/*(float) (CFunc0) SDL_log10,*/
-/*(float) (CFunc0) SDL_log10f,*/
-/*(float) (CFunc0) SDL_pow,*/
-/*(float) (CFunc0) SDL_powf,*/
-/*(float) (CFunc0) SDL_round,*/
-/*(float) (CFunc0) SDL_roundf,*/
-/*(float) (CFunc0) SDL_lround,*/
-/*(float) (CFunc0) SDL_lroundf,*/
-/*(float) (CFunc0) SDL_scalbn,*/
-/*(float) (CFunc0) SDL_scalbnf,*/
-/*(float) (CFunc0) SDL_sin,*/
-/*(float) (CFunc0) SDL_sinf,*/
-/*(float) (CFunc0) SDL_sqrt,*/
-/*(float) (CFunc0) SDL_sqrtf,*/
-/*(float) (CFunc0) SDL_tan,*/
-/*(float) (CFunc0) SDL_tanf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_acos,*/
+/*[[[float param+ret]]] (CFunc0) SDL_acosf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_asin,*/
+/*[[[float param+ret]]] (CFunc0) SDL_asinf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_atan,*/
+/*[[[float param+ret]]] (CFunc0) SDL_atanf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_atan2,*/
+/*[[[float param+ret]]] (CFunc0) SDL_atan2f,*/
+/*[[[float param+ret]]] (CFunc0) SDL_ceil,*/
+/*[[[float param+ret]]] (CFunc0) SDL_ceilf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_copysign,*/
+/*[[[float param+ret]]] (CFunc0) SDL_copysignf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_cos,*/
+/*[[[float param+ret]]] (CFunc0) SDL_cosf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_exp,*/
+/*[[[float param+ret]]] (CFunc0) SDL_expf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_fabs,*/
+/*[[[float param+ret]]] (CFunc0) SDL_fabsf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_floor,*/
+/*[[[float param+ret]]] (CFunc0) SDL_floorf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_trunc,*/
+/*[[[float param+ret]]] (CFunc0) SDL_truncf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_fmod,*/
+/*[[[float param+ret]]] (CFunc0) SDL_fmodf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_log,*/
+/*[[[float param+ret]]] (CFunc0) SDL_logf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_log10,*/
+/*[[[float param+ret]]] (CFunc0) SDL_log10f,*/
+/*[[[float param+ret]]] (CFunc0) SDL_pow,*/
+/*[[[float param+ret]]] (CFunc0) SDL_powf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_round,*/
+/*[[[float param+ret]]] (CFunc0) SDL_roundf,*/
+/*[[[float param]]] (CFunc0) SDL_lround,*/
+/*[[[float param]]] (CFunc0) SDL_lroundf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_scalbn,*/
+/*[[[float param+ret]]] (CFunc0) SDL_scalbnf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_sin,*/
+/*[[[float param+ret]]] (CFunc0) SDL_sinf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_sqrt,*/
+/*[[[float param+ret]]] (CFunc0) SDL_sqrtf,*/
+/*[[[float param+ret]]] (CFunc0) SDL_tan,*/
+/*[[[float param+ret]]] (CFunc0) SDL_tanf,*/
 (CFunc0) SDL_iconv_open,
 (CFunc0) SDL_iconv_close,
 (CFunc0) SDL_iconv,
@@ -159,7 +159,7 @@
 (CFunc0) SDL_Swap16,
 (CFunc0) SDL_Swap32,
 (CFunc0) SDL_Swap64,
-/*(float) (CFunc0) SDL_SwapFloat,*/
+/*[[[float param+ret]]] (CFunc0) SDL_SwapFloat,*/
 (CFunc0) SDL_CreateMutex,
 (CFunc0) SDL_LockMutex,
 (CFunc0) SDL_TryLockMutex,
@@ -235,9 +235,9 @@
 (CFunc0) SDL_PauseAudioDevice,
 (CFunc0) SDL_LoadWAV_RW,
 (CFunc0) SDL_FreeWAV,
-/*(params > 5) (CFunc0) SDL_BuildAudioCVT,*/
+(CFunc0) SDL_BuildAudioCVT,
 (CFunc0) SDL_ConvertAudio,
-/*(params > 5) (CFunc0) SDL_NewAudioStream,*/
+(CFunc0) SDL_NewAudioStream,
 (CFunc0) SDL_AudioStreamPut,
 (CFunc0) SDL_AudioStreamGet,
 (CFunc0) SDL_AudioStreamAvailable,
@@ -286,7 +286,7 @@
 (CFunc0) SDL_SIMDRealloc,
 (CFunc0) SDL_SIMDFree,
 (CFunc0) SDL_GetPixelFormatName,
-/*(params > 5) (CFunc0) SDL_PixelFormatEnumToMasks,*/
+(CFunc0) SDL_PixelFormatEnumToMasks,
 (CFunc0) SDL_MasksToPixelFormatEnum,
 (CFunc0) SDL_AllocFormat,
 (CFunc0) SDL_FreeFormat,
@@ -297,8 +297,8 @@
 (CFunc0) SDL_MapRGB,
 (CFunc0) SDL_MapRGBA,
 (CFunc0) SDL_GetRGB,
-/*(params > 5) (CFunc0) SDL_GetRGBA,*/
-/*(float) (CFunc0) SDL_CalculateGammaRamp,*/
+(CFunc0) SDL_GetRGBA,
+/*[[[float param]]] (CFunc0) SDL_CalculateGammaRamp,*/
 (CFunc0) SDL_PointInRect,
 (CFunc0) SDL_RectEmpty,
 (CFunc0) SDL_RectEquals,
@@ -309,18 +309,18 @@
 (CFunc0) SDL_IntersectRectAndLine,
 (CFunc0) SDL_PointInFRect,
 (CFunc0) SDL_FRectEmpty,
-/*(float) (CFunc0) SDL_FRectEqualsEpsilon,*/
+/*[[[float param]]] (CFunc0) SDL_FRectEqualsEpsilon,*/
 (CFunc0) SDL_FRectEquals,
 (CFunc0) SDL_HasIntersectionF,
 (CFunc0) SDL_IntersectFRect,
 (CFunc0) SDL_UnionFRect,
 (CFunc0) SDL_EncloseFPoints,
 (CFunc0) SDL_IntersectFRectAndLine,
-/*(params > 5) (CFunc0) SDL_ComposeCustomBlendMode,*/
-/*(params > 5) (CFunc0) SDL_CreateRGBSurface,*/
+(CFunc0) SDL_ComposeCustomBlendMode,
+(CFunc0) SDL_CreateRGBSurface,
 (CFunc0) SDL_CreateRGBSurfaceWithFormat,
-/*(params > 5) (CFunc0) SDL_CreateRGBSurfaceFrom,*/
-/*(params > 5) (CFunc0) SDL_CreateRGBSurfaceWithFormatFrom,*/
+(CFunc0) SDL_CreateRGBSurfaceFrom,
+(CFunc0) SDL_CreateRGBSurfaceWithFormatFrom,
 (CFunc0) SDL_FreeSurface,
 (CFunc0) SDL_SetSurfacePalette,
 (CFunc0) SDL_LockSurface,
@@ -343,8 +343,8 @@
 (CFunc0) SDL_DuplicateSurface,
 (CFunc0) SDL_ConvertSurface,
 (CFunc0) SDL_ConvertSurfaceFormat,
-/*(params > 5) (CFunc0) SDL_ConvertPixels,*/
-/*(params > 5) (CFunc0) SDL_PremultiplyAlpha,*/
+(CFunc0) SDL_ConvertPixels,
+(CFunc0) SDL_PremultiplyAlpha,
 (CFunc0) SDL_FillRect,
 (CFunc0) SDL_FillRects,
 (CFunc0) SDL_UpperBlit,
@@ -379,7 +379,7 @@
 (CFunc0) SDL_GetWindowDisplayMode,
 (CFunc0) SDL_GetWindowICCProfile,
 (CFunc0) SDL_GetWindowPixelFormat,
-/*(params > 5) (CFunc0) SDL_CreateWindow,*/
+(CFunc0) SDL_CreateWindow,
 (CFunc0) SDL_CreateWindowFrom,
 (CFunc0) SDL_GetWindowID,
 (CFunc0) SDL_GetWindowFromID,
@@ -423,9 +423,9 @@
 (CFunc0) SDL_GetGrabbedWindow,
 (CFunc0) SDL_SetWindowMouseRect,
 (CFunc0) SDL_GetWindowMouseRect,
-/*(float) (CFunc0) SDL_SetWindowBrightness,*/
-/*(float) (CFunc0) SDL_GetWindowBrightness,*/
-/*(float) (CFunc0) SDL_SetWindowOpacity,*/
+/*[[[float param]]] (CFunc0) SDL_SetWindowBrightness,*/
+/*[[[float ret]]] (CFunc0) SDL_GetWindowBrightness,*/
+/*[[[float param]]] (CFunc0) SDL_SetWindowOpacity,*/
 (CFunc0) SDL_GetWindowOpacity,
 (CFunc0) SDL_SetWindowModalFor,
 (CFunc0) SDL_SetWindowInputFocus,
@@ -481,7 +481,7 @@
 (CFunc0) SDL_SetRelativeMouseMode,
 (CFunc0) SDL_CaptureMouse,
 (CFunc0) SDL_GetRelativeMouseMode,
-/*(params > 5) (CFunc0) SDL_CreateCursor,*/
+(CFunc0) SDL_CreateCursor,
 (CFunc0) SDL_CreateColorCursor,
 (CFunc0) SDL_CreateSystemCursor,
 (CFunc0) SDL_SetCursor,
@@ -596,11 +596,11 @@
 (CFunc0) SDL_GameControllerGetButton,
 (CFunc0) SDL_GameControllerGetNumTouchpads,
 (CFunc0) SDL_GameControllerGetNumTouchpadFingers,
-/*(params > 5) (CFunc0) SDL_GameControllerGetTouchpadFinger,*/
+(CFunc0) SDL_GameControllerGetTouchpadFinger,
 (CFunc0) SDL_GameControllerHasSensor,
 (CFunc0) SDL_GameControllerSetSensorEnabled,
 (CFunc0) SDL_GameControllerIsSensorEnabled,
-/*(float) (CFunc0) SDL_GameControllerGetSensorDataRate,*/
+/*[[[float ret]]] (CFunc0) SDL_GameControllerGetSensorDataRate,*/
 (CFunc0) SDL_GameControllerGetSensorData,
 (CFunc0) SDL_GameControllerGetSensorDataWithTimestamp,
 (CFunc0) SDL_GameControllerRumble,
@@ -670,7 +670,7 @@
 (CFunc0) SDL_HapticStopAll,
 (CFunc0) SDL_HapticRumbleSupported,
 (CFunc0) SDL_HapticRumbleInit,
-/*(float) (CFunc0) SDL_HapticRumblePlay,*/
+/*[[[float param]]] (CFunc0) SDL_HapticRumblePlay,*/
 (CFunc0) SDL_HapticRumbleStop,
 (CFunc0) SDL_hid_init,
 (CFunc0) SDL_hid_exit,
@@ -739,8 +739,8 @@
 (CFunc0) SDL_SetTextureUserData,
 (CFunc0) SDL_GetTextureUserData,
 (CFunc0) SDL_UpdateTexture,
-/*(params > 5) (CFunc0) SDL_UpdateYUVTexture,*/
-/*(params > 5) (CFunc0) SDL_UpdateNVTexture,*/
+(CFunc0) SDL_UpdateYUVTexture,
+(CFunc0) SDL_UpdateNVTexture,
 (CFunc0) SDL_LockTexture,
 (CFunc0) SDL_LockTextureToSurface,
 (CFunc0) SDL_UnlockTexture,
@@ -756,10 +756,10 @@
 (CFunc0) SDL_RenderSetClipRect,
 (CFunc0) SDL_RenderGetClipRect,
 (CFunc0) SDL_RenderIsClipEnabled,
-/*(float) (CFunc0) SDL_RenderSetScale,*/
+/*[[[float param]]] (CFunc0) SDL_RenderSetScale,*/
 (CFunc0) SDL_RenderGetScale,
 (CFunc0) SDL_RenderWindowToLogical,
-/*(float) (CFunc0) SDL_RenderLogicalToWindow,*/
+/*[[[float param]]] (CFunc0) SDL_RenderLogicalToWindow,*/
 (CFunc0) SDL_SetRenderDrawColor,
 (CFunc0) SDL_GetRenderDrawColor,
 (CFunc0) SDL_SetRenderDrawBlendMode,
@@ -774,19 +774,19 @@
 (CFunc0) SDL_RenderFillRect,
 (CFunc0) SDL_RenderFillRects,
 (CFunc0) SDL_RenderCopy,
-/*(params > 5) (CFunc0) SDL_RenderCopyEx,*/
-/*(float) (CFunc0) SDL_RenderDrawPointF,*/
+/*[[[float param]]] (CFunc0) SDL_RenderCopyEx,*/
+/*[[[float param]]] (CFunc0) SDL_RenderDrawPointF,*/
 (CFunc0) SDL_RenderDrawPointsF,
-/*(float) (CFunc0) SDL_RenderDrawLineF,*/
+/*[[[float param]]] (CFunc0) SDL_RenderDrawLineF,*/
 (CFunc0) SDL_RenderDrawLinesF,
 (CFunc0) SDL_RenderDrawRectF,
 (CFunc0) SDL_RenderDrawRectsF,
 (CFunc0) SDL_RenderFillRectF,
 (CFunc0) SDL_RenderFillRectsF,
 (CFunc0) SDL_RenderCopyF,
-/*(params > 5) (CFunc0) SDL_RenderCopyExF,*/
-/*(params > 5) (CFunc0) SDL_RenderGeometry,*/
-/*(params > 5) (CFunc0) SDL_RenderGeometryRaw,*/
+/*[[[float param]]] (CFunc0) SDL_RenderCopyExF,*/
+(CFunc0) SDL_RenderGeometry,
+(CFunc0) SDL_RenderGeometryRaw,
 (CFunc0) SDL_RenderReadPixels,
 (CFunc0) SDL_RenderPresent,
 (CFunc0) SDL_DestroyTexture,
@@ -797,7 +797,7 @@
 (CFunc0) SDL_RenderGetMetalLayer,
 (CFunc0) SDL_RenderGetMetalCommandEncoder,
 (CFunc0) SDL_RenderSetVSync,
-/*(params > 5) (CFunc0) SDL_CreateShapedWindow,*/
+(CFunc0) SDL_CreateShapedWindow,
 (CFunc0) SDL_IsShapedWindow,
 (CFunc0) SDL_SetWindowShape,
 (CFunc0) SDL_GetShapedWindowMode,
@@ -898,7 +898,7 @@
 (CFunc0) TTF_OpenFontDPI,
 (CFunc0) TTF_OpenFontIndexDPI,
 (CFunc0) TTF_OpenFontDPIRW,
-/*(params > 5) (CFunc0) TTF_OpenFontIndexDPIRW,*/
+(CFunc0) TTF_OpenFontIndexDPIRW,
 (CFunc0) TTF_SetFontSize,
 (CFunc0) TTF_SetFontSizeDPI,
 (CFunc0) TTF_GetFontStyle,
@@ -921,8 +921,8 @@
 (CFunc0) TTF_FontFaceStyleName,
 (CFunc0) TTF_GlyphIsProvided,
 (CFunc0) TTF_GlyphIsProvided32,
-/*(params > 5) (CFunc0) TTF_GlyphMetrics,*/
-/*(params > 5) (CFunc0) TTF_GlyphMetrics32,*/
+(CFunc0) TTF_GlyphMetrics,
+(CFunc0) TTF_GlyphMetrics32,
 (CFunc0) TTF_SizeText,
 (CFunc0) TTF_SizeUTF8,
 (CFunc0) TTF_SizeUNICODE,
@@ -976,7 +976,7 @@
 (CFunc0) Mix_Init,
 (CFunc0) Mix_Quit,
 (CFunc0) Mix_OpenAudio,
-/*(params > 5) (CFunc0) Mix_OpenAudioDevice,*/
+(CFunc0) Mix_OpenAudioDevice,
 (CFunc0) Mix_QuerySpec,
 (CFunc0) Mix_AllocateChannels,
 (CFunc0) Mix_LoadWAV_RW,

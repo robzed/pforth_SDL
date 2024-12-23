@@ -26,7 +26,7 @@ extern CFunc0 CustomFunctionTable[];
 /***************************************************************/
 cell_t CallUserFunction( cell_t Index, int32_t ReturnMode, int32_t NumParams )
 {
-    cell_t P1, P2, P3, P4, P5;
+    cell_t P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12;
     cell_t Result = 0;
     CFunc0 CF;
 
@@ -69,6 +69,90 @@ DBUG(("CallUserFunction: Index = %d, ReturnMode = %d, NumParams = %d\n",
         P2 = POP_DATA_STACK;
         P1 = POP_DATA_STACK;
         Result = ((CFunc5) CF) ( P1, P2, P3, P4, P5 );
+        break;
+    case 6:
+        P6 = POP_DATA_STACK;
+        P5 = POP_DATA_STACK;
+        P4 = POP_DATA_STACK;
+        P3 = POP_DATA_STACK;
+        P2 = POP_DATA_STACK;
+        P1 = POP_DATA_STACK;
+        Result = ((CFunc6) CF) ( P1, P2, P3, P4, P5, P6);
+        break;
+    case 7:
+        P7 = POP_DATA_STACK;
+        P6 = POP_DATA_STACK;
+        P5 = POP_DATA_STACK;
+        P4 = POP_DATA_STACK;
+        P3 = POP_DATA_STACK;
+        P2 = POP_DATA_STACK;
+        P1 = POP_DATA_STACK;
+        Result = ((CFunc7) CF) ( P1, P2, P3, P4, P5, P6, P7);
+        break;
+    case 8:
+        P8 = POP_DATA_STACK;
+        P7 = POP_DATA_STACK;
+        P6 = POP_DATA_STACK;
+        P5 = POP_DATA_STACK;
+        P4 = POP_DATA_STACK;
+        P3 = POP_DATA_STACK;
+        P2 = POP_DATA_STACK;
+        P1 = POP_DATA_STACK;
+        Result = ((CFunc8) CF) ( P1, P2, P3, P4, P5, P6, P7, P8);
+        break;
+    case 9:
+        P9 = POP_DATA_STACK;
+        P8 = POP_DATA_STACK;
+        P7 = POP_DATA_STACK;
+        P6 = POP_DATA_STACK;
+        P5 = POP_DATA_STACK;
+        P4 = POP_DATA_STACK;
+        P3 = POP_DATA_STACK;
+        P2 = POP_DATA_STACK;
+        P1 = POP_DATA_STACK;
+        Result = ((CFunc9) CF) ( P1, P2, P3, P4, P5, P6, P7, P8, P9);
+        break;
+    case 10:
+        P10 = POP_DATA_STACK;
+        P9 = POP_DATA_STACK;
+        P8 = POP_DATA_STACK;
+        P7 = POP_DATA_STACK;
+        P6 = POP_DATA_STACK;
+        P5 = POP_DATA_STACK;
+        P4 = POP_DATA_STACK;
+        P3 = POP_DATA_STACK;
+        P2 = POP_DATA_STACK;
+        P1 = POP_DATA_STACK;
+        Result = ((CFunc10) CF) ( P1, P2, P3, P4, P5, P6, P7, P8, P9, P10);
+        break;
+    case 11:
+        P11 = POP_DATA_STACK;
+        P10 = POP_DATA_STACK;
+        P9 = POP_DATA_STACK;
+        P8 = POP_DATA_STACK;
+        P7 = POP_DATA_STACK;
+        P6 = POP_DATA_STACK;
+        P5 = POP_DATA_STACK;
+        P4 = POP_DATA_STACK;
+        P3 = POP_DATA_STACK;
+        P2 = POP_DATA_STACK;
+        P1 = POP_DATA_STACK;
+        Result = ((CFunc11) CF) ( P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11);
+        break;
+    case 12:
+        P12 = POP_DATA_STACK;
+        P11 = POP_DATA_STACK;
+        P10 = POP_DATA_STACK;
+        P9 = POP_DATA_STACK;
+        P8 = POP_DATA_STACK;
+        P7 = POP_DATA_STACK;
+        P6 = POP_DATA_STACK;
+        P5 = POP_DATA_STACK;
+        P4 = POP_DATA_STACK;
+        P3 = POP_DATA_STACK;
+        P2 = POP_DATA_STACK;
+        P1 = POP_DATA_STACK;
+        Result = ((CFunc12) CF) ( P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12 );
         break;
     default:
         pfReportError("CallUserFunction", PF_ERR_NUM_PARAMS);
