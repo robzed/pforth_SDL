@@ -23,6 +23,8 @@
 **
 ***************************************************************/
 
+#include <SDL2/SDL.h>
+
 #if (defined(PF_NO_STDIO) || defined(PF_EMBEDDED))
     #define NULL  ((void *) 0)
     #define ERR(msg) /* { printf msg; } */

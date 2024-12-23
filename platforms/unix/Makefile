@@ -36,10 +36,9 @@ FULL_WARNINGS =  \
         -Wall \
         -Wwrite-strings \
         -Winline  \
-        -Wmissing-prototypes \
         -Wmissing-declarations
 
-DEBUGOPTS = -g
+DEBUGOPTS = -g -fsanitize=address
 CCOPTS = $(WIDTHOPT) -x c -O2 $(FULL_WARNINGS) $(EXTRA_CCOPTS) $(DEBUGOPTS)
 
 IO_SOURCE = pf_io_posix.c pf_fileio_stdio.c
@@ -56,21 +55,24 @@ endif
 PFINCLUDES = pf_all.h pf_cglue.h pf_clib.h pf_core.h pf_float.h \
 	pf_guts.h pf_host.h pf_inc1.h pf_io.h pf_mem.h pf_save.h \
 	pf_text.h pf_types.h pf_win32.h pf_words.h pfcompfp.h \
-	pfcompil.h pfinnrfp.h pforth.h
+	pfcompil.h pfinnrfp.h pforth.h sdl2_glue.h sdl2_helper.h sdl2_dic_entries.h
 PFBASESOURCE = pf_cglue.c pf_clib.c pf_core.c pf_inner.c \
 	pf_io.c pf_io_none.c pf_main.c pf_mem.c pf_save.c \
 	pf_text.c pf_words.c pfcompil.c pfcustom.c
-PFSOURCE = $(PFBASESOURCE) $(IO_SOURCE)
+PFSOURCE = $(PFBASESOURCE) $(IO_SOURCE) sdl_custom.c
 
 VPATH = .:$(CSRCDIR):$(CSRCDIR)/posix:$(CSRCDIR)/stdio:$(CSRCDIR)/win32_console:$(CSRCDIR)/win32
 
 XCFLAGS = $(CCOPTS)
-XCPPFLAGS = -DPF_SUPPORT_FP -D_DEFAULT_SOURCE -D_GNU_SOURCE
+XCPPFLAGS = -DPF_SUPPORT_FP -D_DEFAULT_SOURCE -D_GNU_SOURCE -DPF_USER_CUSTOM
+#XCPPFLAGS = -DPF_SUPPORT_FP -DPF_USER_CUSTOM
 XLDFLAGS = $(WIDTHOPT)
 
-CPPFLAGS = -I. $(XCPPFLAGS)
-CFLAGS = $(XCFLAGS)
-LDFLAGS = $(XLDFLAGS)
+CPPFLAGS = -I. $(XCPPFLAGS) 
+#CFLAGS = $(XCFLAGS) -I/opt/homebrew/include/
+CFLAGS = $(XCFLAGS) -F /Library/Frameworks
+#LDFLAGS = $(XLDFLAGS) -L/opt/homebrew/lib  -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2main
+LDFLAGS = $(XLDFLAGS) -fsanitize=address -F /Library/Frameworks -framework SDL2  -framework SDL2_ttf -framework SDL2_image -framework SDL2_mixer -rpath /Library/Frameworks
 
 COMPILE = $(CC) $(CFLAGS) $(CPPFLAGS)
 LINK = $(CC) $(LDFLAGS)
