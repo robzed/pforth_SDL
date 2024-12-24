@@ -5,7 +5,7 @@
 \ Based off Video1 'main.fs' from ProgrammingRainbow's SDL2 tutorial.
 
 \ SDL2 parsing helper
-require pforth_files/sdl2_parse.fth
+require sdl2_parse.fth
 
 \ SDL2 library - notice internal paths assume we are in SDL2/ directory
 S" SDL2/" set-require-subdir 
@@ -49,7 +49,6 @@ NULL VALUE renderer
         S" Error initializing SDL: " error
     THEN
 
-    ." go to create window " cr 1000 ms
     WINDOW_TITLE SDL_WINDOWPOS_CENTERED SDL_WINDOWPOS_CENTERED WINDOW_WIDTH WINDOW_HEIGHT 0
     SDL_CreateWindow TO window
     window 0= IF 
@@ -63,48 +62,68 @@ NULL VALUE renderer
 ;
 
 : random-color ( -- )
-    renderer 256 choose 256 choose 256 choose 255 SDL_SetRenderDrawColor DROP
+    renderer 256 choose 256 choose 256 choose 255 SDL_SetRenderDrawColor dup if
+        S" Error setting color code " .
+        S" SDL Error:" SDL_GetError c-str-len type cr
+    else
+        drop
+    THEN
 ;
 
 CREATE event SDL_Event ALLOT
 
-: do-event-loop
+: do-game-loop
+    ." Start do-game-loop" cr
     BEGIN
         BEGIN event SDL_PollEvent WHILE
             event SDL_Event-type u32@
+            dup ." event type =" . cr
             DUP SDL_QUIT_ENUM = IF
+                ." SDL_QUIT event " dup cr
                 exit
             THEN
             SDL_KEYDOWN = IF
                 event SDL_KeyboardEvent-keysym SDL_Keysym-scancode s32@
+                ." Key pressed " dup . cr
                 DUP SDL_SCANCODE_ESCAPE = IF
-                    exit
+                    drop exit
                 THEN
                 DUP SDL_SCANCODE_SPACE = IF
+                    ." Pressed Space - Change colour" cr
                     random-color
-                    renderer SDL_RenderClear DROP
+                    renderer SDL_RenderClear if
+                        S" Error clearing renderer" error
+                    THEN
+                    renderer SDL_RenderPresent
                 THEN
                 SDL_SCANCODE_M = IF
+                    ." Pressed M" cr
                     \ do something when M is pressed
                 THEN
             THEN
         REPEAT
+        100 ms \ ." no events" cr
     AGAIN
+    \ could replace exits via variable check with BEGIN...UNTIL loop
+    ." *** Should never get here - exit from word by EXIT" cr
 ;
 
 
-: game-loop ( -- )
+: game-main ( -- )
+    \ clear the screen
     renderer SDL_RenderClear DROP
-        
     renderer SDL_RenderPresent
 
-    game-cleanup
+    ." running game " cr 10 ms
+    do-game-loop
+
 ;
 
 : play-game ( -- )
     initialize-sdl
-    game-loop
+    game-main
+    game-cleanup
+    ." quit game " cr 10 ms
 ;
 
 play-game
-

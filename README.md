@@ -70,13 +70,15 @@ Otherwise the instructions are the same. At some point I'll get the second part 
 * ~~Make 16 bit and 32 bit fetches native - Create forth definitions - made with py tool~~
     * ~~and stores~~
 * Test SDL example works 
+* Why isn't window closing on pressing escape?
+* Why can't you run play-game twice?
+* Add some text on the screen
 * ~~edit readme in SDL pForth - explain what it is - basic version!~~
 * merge back to SDL_master
 * make sure SDL dictionary is built in as standard /or/ has enough space to import SDL2 libs and sdl2_parse.fth <<<< rebuild dictionary should have those definitions built in!!!!
 * Long names size should be configurable (31 or 63)
     * Optional Long name - PR back to pForth
 * float parameters, float return - allow rest of SDL functions to be used
-* SDL import stuff   (what does this mean?)
 * Portability: Tidy up make file for Linux, homebrew
 * Portability: Fix windows build
 * Portability: Statically link SDL2 - in reality, README: because this means people an play your game without extra DLLs, shared libs, or frameworks
