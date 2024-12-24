@@ -41,11 +41,11 @@ some notes for that, but right now you are
 
 * ~~Move stuff from caves to SDL-pForth~~
 * ~~Add license and readme to SDL2 directory~~
-* Switch the license over to 0BSD for non-SDL files
-* Make 16 bit and 32 bit fetches native - Create forth definitions - made with py tool
-    * and stores
+* ~~Switch the license over to 0BSD for non-SDL files~~
+* ~~Make 16 bit and 32 bit fetches native - Create forth definitions - made with py tool~~
+    * ~~and stores~~
 * Test SDL example works 
-* edit readme in SDL pForth - explain what it is - basic version!
+* ~~edit readme in SDL pForth - explain what it is - basic version!~~
 * merge back to SDL_master
 * make sure SDL dictionary is built in as standard /or/ has enough space to import SDL2 libs and sdl2_parse.fth <<<< rebuild dictionary should have those definitions built in!!!!
 * Long names size should be configurable (31 or 63)
@@ -59,7 +59,7 @@ some notes for that, but right now you are
 
 ## LONGER TERM TO DO LIST
 
-* Fix this README properly
+* Fix this README properly - instructions of building, and instructions on SDL_tools directory and SDL2_example.fth
 * Add instructions for differences between gForth and pForth when using tutorials.
 * Add names too long warning
 

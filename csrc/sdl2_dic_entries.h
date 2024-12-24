@@ -1,6 +1,23 @@
-/* WARNING: This is an auto-generated file. Do not edit it manually. 
-   Edit the corresponding .fs file instead and run pforth_case_creation.py to regenerate this file. */
+/* WARNING: This is an auto-generated file. Do not edit it manually.
+   Edit the corresponding .fs file instead and run pforth_case_creation.py to regenerate this file.
+   This file ZLib licensed because it's generated from the SDL2/ directory. */
 
+(CFunc0) u64_fetch,
+(CFunc0) s64_fetch,
+(CFunc0) u32_fetch,
+(CFunc0) s32_fetch,
+(CFunc0) u16_fetch,
+(CFunc0) s16_fetch,
+(CFunc0) u8_fetch,
+(CFunc0) s8_fetch,
+(CFunc0) u64_store,
+(CFunc0) s64_store,
+(CFunc0) u32_store,
+(CFunc0) s32_store,
+(CFunc0) u16_store,
+(CFunc0) s16_store,
+(CFunc0) u8_store,
+(CFunc0) s8_store,
 (CFunc0) sizeof_char,
 (CFunc0) sizeof_short,
 (CFunc0) sizeof_size_t,

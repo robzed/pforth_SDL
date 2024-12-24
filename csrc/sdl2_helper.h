@@ -1,5 +1,23 @@
-/* WARNING: This is an auto-generated file. Do not edit it manually. 
-   Edit the corresponding .fs file instead and run pforth_case_creation.py to regenerate this file. */
+/* WARNING: This is an auto-generated file. Do not edit it manually.
+   Edit the corresponding .fs file instead and run pforth_case_creation.py to regenerate this file.
+   This file ZLib licensed because it's generated from the SDL2/ directory. */
+#include <stdint.h>
+uint64_t u64_fetch(void* addr) { return (*(uint64_t*)addr); }
+int      s64_fetch(void* addr) { return (*( int64_t*)addr); }
+uint32_t u32_fetch(void* addr) { return (*(uint32_t*)addr); }
+int      s32_fetch(void* addr) { return (*( int32_t*)addr); }
+uint16_t u16_fetch(void* addr) { return (*(uint16_t*)addr); }
+int      s16_fetch(void* addr) { return (*( int16_t*)addr); }
+uint8_t   u8_fetch(void* addr) { return (*( uint8_t*)addr); }
+int       s8_fetch(void* addr) { return (*(  int8_t*)addr); }
+void u64_store(uint64_t data, void* addr) { *(uint64_t*)addr = data; }
+void s64_store( int64_t data, void* addr) { *( int64_t*)addr = data; }
+void u32_store(uint32_t data, void* addr) { *(uint32_t*)addr = data; }
+void s32_store( int32_t data, void* addr) { *( int32_t*)addr = data; }
+void u16_store(uint16_t data, void* addr) { *(uint16_t*)addr = data; }
+void s16_store( int16_t data, void* addr) { *( int16_t*)addr = data; }
+void  u8_store( uint8_t data, void* addr) { *( uint8_t*)addr = data; }
+void  s8_store(  int8_t data, void* addr) { *(  int8_t*)addr = data; }
 #include <stddef.h>
 int sizeof_char() { return sizeof(char); }
 int sizeof_short() { return sizeof(short); }

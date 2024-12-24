@@ -18,13 +18,16 @@ import os
 import sys
 
 files_to_parse = [
-    "pforth_extra.fs",
+    "extra_pforth.fs",
     "SDL2/SDL.fs",
     "SDL2/SDL_image.fs",
     "SDL2/SDL_ttf.fs",
     "SDL2/SDL_mixer.fs",
 ]
-warning = "/* WARNING: This is an auto-generated file. Do not edit it manually. \n   Edit the corresponding .fs file instead and run pforth_case_creation.py to regenerate this file. */\n"
+warning =  "/* WARNING: This is an auto-generated file. Do not edit it manually.\n"
+warning += "   Edit the corresponding .fs file instead and run pforth_case_creation.py to regenerate this file.\n"
+warning += "   This file ZLib licensed because it's generated from the SDL2/ directory. */\n"
+
 helper_code = [warning]
 glue_code = [warning]
 dic_entry_code = [warning]
@@ -193,16 +196,16 @@ def main():
         print(f"Parsing file: {file}")
         parse_sdl_api_file(file)
 
-    with open("pforth_files/sdl2_helper.h", "w") as f:
+    with open("../csrc/sdl2_helper.h", "w") as f:
         for line in helper_code:
             f.write(line)
 
-    with open("pforth_files/sdl2_glue.h", "w") as f:
+    with open("../csrc/sdl2_glue.h", "w") as f:
         for line in glue_code:
             f.write(line)
             f.write("\n")
 
-    with open("pforth_files/sdl2_dic_entries.h", "w") as f:
+    with open("../csrc/sdl2_dic_entries.h", "w") as f:
         for line in dic_entry_code:
             f.write(line)
             f.write("\n")

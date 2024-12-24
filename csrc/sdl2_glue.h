@@ -1,6 +1,23 @@
-/* WARNING: This is an auto-generated file. Do not edit it manually. 
-   Edit the corresponding .fs file instead and run pforth_case_creation.py to regenerate this file. */
+/* WARNING: This is an auto-generated file. Do not edit it manually.
+   Edit the corresponding .fs file instead and run pforth_case_creation.py to regenerate this file.
+   This file ZLib licensed because it's generated from the SDL2/ directory. */
 
+err = CreateGlueToC( "u64@", i++, C_RETURNS_VALUE, 1); if( err < 0 ) return err;
+err = CreateGlueToC( "s64@", i++, C_RETURNS_VALUE, 1); if( err < 0 ) return err;
+err = CreateGlueToC( "u32@", i++, C_RETURNS_VALUE, 1); if( err < 0 ) return err;
+err = CreateGlueToC( "s32@", i++, C_RETURNS_VALUE, 1); if( err < 0 ) return err;
+err = CreateGlueToC( "u16@", i++, C_RETURNS_VALUE, 1); if( err < 0 ) return err;
+err = CreateGlueToC( "s16@", i++, C_RETURNS_VALUE, 1); if( err < 0 ) return err;
+err = CreateGlueToC( "u8@", i++, C_RETURNS_VALUE, 1); if( err < 0 ) return err;
+err = CreateGlueToC( "s8@", i++, C_RETURNS_VALUE, 1); if( err < 0 ) return err;
+err = CreateGlueToC( "u64!", i++, C_RETURNS_VOID, 2); if( err < 0 ) return err;
+err = CreateGlueToC( "s64!", i++, C_RETURNS_VOID, 2); if( err < 0 ) return err;
+err = CreateGlueToC( "u32!", i++, C_RETURNS_VOID, 2); if( err < 0 ) return err;
+err = CreateGlueToC( "s32!", i++, C_RETURNS_VOID, 2); if( err < 0 ) return err;
+err = CreateGlueToC( "u16!", i++, C_RETURNS_VOID, 2); if( err < 0 ) return err;
+err = CreateGlueToC( "s16!", i++, C_RETURNS_VOID, 2); if( err < 0 ) return err;
+err = CreateGlueToC( "u8!", i++, C_RETURNS_VOID, 2); if( err < 0 ) return err;
+err = CreateGlueToC( "s8!", i++, C_RETURNS_VOID, 2); if( err < 0 ) return err;
 err = CreateGlueToC( "sizeof_char", i++, C_RETURNS_VALUE, 0); if( err < 0 ) return err;
 err = CreateGlueToC( "sizeof_short", i++, C_RETURNS_VALUE, 0); if( err < 0 ) return err;
 err = CreateGlueToC( "sizeof_size_t", i++, C_RETURNS_VALUE, 0); if( err < 0 ) return err;
