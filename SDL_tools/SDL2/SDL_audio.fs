@@ -89,7 +89,6 @@ c-function SDL_LoadWAV_RW SDL_LoadWAV_RW a n a a a -- a	( src freesrc spec audio
 c-function SDL_FreeWAV SDL_FreeWAV a -- void	( audio_buf -- )
 c-function SDL_BuildAudioCVT SDL_BuildAudioCVT a n n n n n n -- n	( cvt src_format src_channels src_rate dst_format dst_channels dst_rate -- )
 c-function SDL_ConvertAudio SDL_ConvertAudio a -- n	( cvt -- )
-." Hello from SDL_audio.fs" cr source hex . space . decimal 1000 ms
 c-function SDL_NewAudioStream SDL_NewAudioStream n n n n n n -- a	( src_format src_channels src_rate dst_format dst_channels dst_rate -- )
 c-function SDL_AudioStreamPut SDL_AudioStreamPut a a n -- n	( stream buf len -- )
 c-function SDL_AudioStreamGet SDL_AudioStreamGet a a n -- n	( stream buf len -- )

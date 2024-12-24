@@ -10,17 +10,17 @@ be migrated back to pForth.
 
 It's based on the following projects:
 
-pForth  
-    https://www.softsynth.com/pforth
-    https://github.com/philburk/pforth
-    0BSD License
-ProgrammingRainbow's SDL binding for gForth:
-    https://github.com/ProgrammingRainbow/Beginners-Guide-to-SDL2-in-Gforth
-    Zlib License
-    (also see the videos here https://www.youtube.com/watch?v=PZFMcBKKiCM)
-libSDL
-    https://www.libsdl.org
-    Zlib License
+* pForth  
+    * https://www.softsynth.com/pforth
+    * https://github.com/philburk/pforth
+    * 0BSD License
+* ProgrammingRainbow's SDL binding for gForth:
+    * https://github.com/ProgrammingRainbow/Beginners-Guide-to-SDL2-in-Gforth
+    * Zlib License
+    * (also see the videos here https://www.youtube.com/watch?v=PZFMcBKKiCM)
+* libSDL
+    * https://www.libsdl.org
+    * Zlib License
 
 Current lot of things are under construction. Right now it works for me on MacOS 
 with the SDL framework installed in Library/Framework - but mainly I want to fix the 
@@ -39,8 +39,8 @@ some notes for that, but right now you are
 
 ## IMMEDIATE TO DO LIST
 
-* Move stuff from caves to SDL-pForth 
-* Add license and readme to SDL2 directory
+* ~~Move stuff from caves to SDL-pForth~~
+* ~~Add license and readme to SDL2 directory~~
 * Switch the license over to 0BSD for non-SDL files
 * Make 16 bit and 32 bit fetches native - Create forth definitions - made with py tool
 * Test SDL example works 
