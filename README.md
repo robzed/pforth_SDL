@@ -36,6 +36,31 @@ differences between gForth and pForth, so you might need to make some adjustment
 if you are following Programming Rainbow's SDL tutorial. At some point I'll add 
 some notes for that, but right now you are 
 
+## How to get it to run
+
+Assuming Mac OS with SDL, SDL Mixer, SDL TTF, SDL image installed in /Library/Frameworks the current procedure to get something running is:
+
+1. cd platforms/unix
+2. make clean
+3. make all
+4. ./pforth_standalone
+5. cd ../../SDL_tools
+6. 500000 CODE-SIZE !         \ request code portion of new dictionary to be 500000 bytes
+7. 300000 HEADERS-SIZE !      \ request name portion of new dictionary to be 300000 bytes
+8. c" bigger.dic" SAVE-FORTH  \ create new and bigger dictionary file
+9. bye
+10. ../platforms/unix/pforth_standalone -dbigger-dic
+11.  SDL_GetTicks .         \ should print zero
+12.  SDL_GetTicks .         \ should print a bigger number like 935.
+13.  SDL_GetTicks .         \ should print a bigger number like 2071.
+14.  include sdl2_example.fth   \ you can press space to change the colour of the screen, and escape to exit.
+
+If you are not using MacOS or the framework is in a different place then you'll 
+need to adjust the `Makefile`. This will be fixed at some point. You'll also need to adjust the paths of SDL_mixer, SDL_image and SDL_ttf to SDL2/SDL_xxxx.h inside
+csrc/sdl2_helper.h before doing the `make all`
+
+Otherwise the instructions are the same. At some point I'll get the second part of the SDL headers included into the pforth_standalone build, and the dictionary expansion won't be required to run the demo.
+
 
 ## IMMEDIATE TO DO LIST
 
