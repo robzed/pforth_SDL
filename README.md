@@ -1,3 +1,70 @@
+# PForth SDL - pForth extended with libSDL bindings
+
+This is a work in progress - currently under construction.
+
+Originally this was meant to be a set of instructions inside a different project
+but as the changes grew, it seemed like having a fork of pforth was the best idea
+for everyone, including me. However, although this is a fork, it intends to stay 
+as close to pForth base as I can - and hopefully some of the non-SDL changes can 
+be migrated back to pForth.
+
+It's based on the following projects:
+
+pForth  
+    https://www.softsynth.com/pforth
+    https://github.com/philburk/pforth
+    0BSD License
+ProgrammingRainbow's SDL binding for gForth:
+    https://github.com/ProgrammingRainbow/Beginners-Guide-to-SDL2-in-Gforth
+    Zlib License
+    (also see the videos here https://www.youtube.com/watch?v=PZFMcBKKiCM)
+libSDL
+    https://www.libsdl.org
+    Zlib License
+
+Current lot of things are under construction. Right now it works for me on MacOS 
+with the SDL framework installed in Library/Framework - but mainly I want to fix the 
+cross-platform stuff and add static linking with SDL in so that people an play 
+your game without extra DLLs, shared libs, or frameworks. Oh, I really want to get
+back to programming my game (which isn't even for pForth or SDL) ... this is a 
+purely a side quest :-D
+
+This project is licensed mostly in 0BSD, with the SDL specific parts being Zlib.
+
+Instructions - see the three projects above. NOTE: There are a few minor
+differences between gForth and pForth, so you might need to make some adjustments
+if you are following Programming Rainbow's SDL tutorial. At some point I'll add 
+some notes for that, but right now you are 
+
+
+## IMMEDIATE TO DO LIST
+
+* Move stuff from caves to SDL-pForth 
+* Add license and readme to SDL2 directory
+* Switch the license over to 0BSD for non-SDL files
+* Make 16 bit and 32 bit fetches native - Create forth definitions - made with py tool
+* Test SDL example works 
+* edit readme in SDL pForth - explain what it is - basic version!
+* merge back to SDL_master
+* make sure SDL dictionary is built in as standard /or/ has enough space to import SDL2 libs and sdl2_parse.fth <<<< rebuild dictionary should have those definitions built in!!!!
+* Long names size should be configurable (31 or 63)
+    * Optional Long name - PR back to pForth
+* float parameters, float return - allow rest of SDL functions to be used
+* SDL import stuff   (what does this mean?)
+* Portability: Tidy up make file for Linux, homebrew
+* Portability: Fix windows build
+* Portability: Statically link SDL2 - in reality, README: because this means people an play your game without extra DLLs, shared libs, or frameworks
+* Portability: Fix sdl2_helper.h paths for SDL2 that are mac Library/framework specific… (SDL2_Mixer/, etc.)
+
+## LONGER TERM TO DO LIST
+
+* Fix this README properly
+* Add instructions for differences between gForth and pForth when using tutorials.
+* Add names too long warning
+
+
+# ORIGINAL PFORTH TEXT - edit it at some point.
+
 # PForth - a Portable ANS-like Forth written in ANSI 'C'
 
 by Phil Burk
