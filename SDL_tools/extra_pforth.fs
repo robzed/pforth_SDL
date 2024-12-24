@@ -1,3 +1,6 @@
+\ Written by Rob Probin, December 2024
+\ This file is 0BSD licensed.
+
 \c #include <stdint.h>
 
 \ various small loads ... all native endian

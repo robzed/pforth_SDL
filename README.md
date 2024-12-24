@@ -43,6 +43,7 @@ some notes for that, but right now you are
 * ~~Add license and readme to SDL2 directory~~
 * Switch the license over to 0BSD for non-SDL files
 * Make 16 bit and 32 bit fetches native - Create forth definitions - made with py tool
+    * and stores
 * Test SDL example works 
 * edit readme in SDL pForth - explain what it is - basic version!
 * merge back to SDL_master

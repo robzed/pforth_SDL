@@ -12,7 +12,7 @@
 # about the C functions used in gForth.
 #
 # Written by Rob Probin December 2024
-# This code is Zlib licensed
+# This code is 0BSD licensed
 
 import os
 import sys
