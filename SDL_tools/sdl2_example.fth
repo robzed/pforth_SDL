@@ -68,25 +68,6 @@ NULL VALUE renderer
 
 CREATE event SDL_Event ALLOT
 
-\ various small loads ... all little endian
-\ NOTICE: We should replace these with C versions for speed
-\ e.g. return (*(uint16_t*)addr)
-\ e.g. return (*(uint32_t*)addr)
-\ e.g. return (*(int16_t*)addr)
-\ e.g. return (*(int32_t*)addr)
-: u8@ c@ ;
-: u16@ ( addr -- u ) dup u8@ swap 1+ u8@ << 8 + ;
-: s16@ ( addr -- n ) u16@ 0x8000 and dup 0<> IF 0xffff0000 or THEN ;
-: u32@ ( addr -- u ) dup u16@ swap 2+ u16@ << 16 + ;
-: s32@ ( addr -- n ) u32@ 0x80000000 and dup 0<> IF 0xffffffff00000000 or THEN ;
-
-\ These match the gForth ones
-\ https://gforth.org/manual/Special-Memory-Accesses.html
-\ https://www.complang.tuwien.ac.at/forth/gforth/Docs-html/Memory-Access.html?
-\ : l@ u32@ ;
-\ : sl@ s32@ ;
- 
-
 : do-event-loop
     BEGIN
         BEGIN event SDL_PollEvent WHILE
