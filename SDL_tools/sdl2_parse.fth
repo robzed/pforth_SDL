@@ -114,7 +114,8 @@ create _path_temp _path_temp_max 1+ allot    \ 1+ is for off by one errors...
 ;
 
 
-\ new version of require for subdirectories
+\ new version of require for subdirectories, to avoid restructuring 
+\ the SDL2/ folder
 : REQUIRE ( i*x "name" -- i*x ) 
     parse-name    ( "name" -- addr u )
     \ don't bother if subdirectory is empty

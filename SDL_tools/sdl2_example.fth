@@ -4,14 +4,6 @@
 \ Written December 2024. 
 \ Based off Video1 'main.fs' from ProgrammingRainbow's SDL2 tutorial.
 
-\ SDL2 parsing helper
-require sdl2_parse.fth
-
-\ SDL2 library - notice internal paths assume we are in SDL2/ directory
-S" SDL2/" set-require-subdir 
-require SDL.fs
-S" " set-require-subdir
-
 \ Constants
 0 CONSTANT NULL
 

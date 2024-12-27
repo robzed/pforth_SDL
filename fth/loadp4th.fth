@@ -50,4 +50,7 @@ include? trace   trace.fth
 include? ESC[    termio.fth
 include? HISTORY history.fth
 
+\ SDL2 support
+include? task-sdl-wrap  sdl-wrap.fth
+
 map

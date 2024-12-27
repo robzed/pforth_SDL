@@ -70,15 +70,15 @@ Otherwise the instructions are the same. At some point I'll get the second part 
 * ~~Make 16 bit and 32 bit fetches native - Create forth definitions - made with py tool~~
     * ~~and stores~~
 * ~~Test SDL example works~~
-* Fix text being duplicated to title
+* Fix text being duplicated to title in example
 * Why isn't window closing on pressing escape?
-* Why can't you run play-game twice?
+* Why can't you run play-game twice in example?
 * ~~Add some text on the screen~~
 * ~~edit readme in SDL pForth - explain what it is - basic version!~~
 * ~~merge back to SDL_master~~
-* make sure SDL dictionary is built in as standard /or/ has enough space to import SDL2 libs and sdl2_parse.fth <<<< rebuild dictionary should have those definitions built in!!!!
-* Long names size should be configurable (31 or 63)
-    * Optional Long name - PR back to pForth
+* ~~make sure SDL dictionary is built in as standard /or/ has enough space to import SDL2 libs and sdl2_parse.fth <<<< rebuild dictionary should have those definitions built in!!!!~~
+* ~~Long names size should be configurable (31 or 63)~~
+    * ~~Optional Long name - PR back to pForth~~
 * float parameters, float return - allow rest of SDL functions to be used
 * Portability: Tidy up make file for Linux, homebrew
 * Portability: Fix windows build
@@ -89,7 +89,7 @@ Otherwise the instructions are the same. At some point I'll get the second part 
 
 * Fix this README properly - instructions of building, and instructions on SDL_tools directory and SDL2_example.fth
 * Add instructions for differences between gForth and pForth when using tutorials.
-* Add names too long warning
+* Add names too long warning to pForth
 
 
 # ORIGINAL PFORTH TEXT - edit it at some point.
