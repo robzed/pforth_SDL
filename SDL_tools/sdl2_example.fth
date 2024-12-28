@@ -7,8 +7,11 @@
 \ Constants
 0 CONSTANT NULL
 
-\ Make a window title with a zero terminator for C-based SDL call
-s\" pForth SDL demo\x00" DROP CONSTANT WINDOW_TITLE
+\ Make a window title with a zero terminator for C-based SDL call.
+\ NOTE: We don't make this a constant from s\" outside word (function) definition
+\ because that doesn't create a permanent string in the dictionary - 
+\ just a temporary one that is replaced the next time s\" is executed.
+: window_title s\" pForth SDL demo\x00" DROP ;
 800 CONSTANT WINDOW_WIDTH
 600 CONSTANT WINDOW_HEIGHT
 SDL_INIT_EVERYTHING CONSTANT SDL_FLAGS
@@ -27,9 +30,9 @@ CREATE White SDL_Color ALLOT
 
 \ Words
 : game-cleanup ( -- )
-    renderer SDL_DestroyRenderer
+    renderer if renderer SDL_DestroyRenderer THEN
     NULL TO renderer
-    window SDL_DestroyWindow
+    window if window SDL_DestroyWindow then
     NULL TO window
 
     TTF_Quit

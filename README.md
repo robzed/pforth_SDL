@@ -70,9 +70,9 @@ Otherwise the instructions are the same. At some point I'll get the second part 
 * ~~Make 16 bit and 32 bit fetches native - Create forth definitions - made with py tool~~
     * ~~and stores~~
 * ~~Test SDL example works~~
-* Fix text being duplicated to title in example
-* Why isn't window closing on pressing escape?
-* Why can't you run play-game twice in example?
+* ~~Fix text being duplicated to title in example~~
+* ~~Why isn't window closing on pressing escape?~~
+* ~~Why can't you run play-game twice in example?~~
 * ~~Add some text on the screen~~
 * ~~edit readme in SDL pForth - explain what it is - basic version!~~
 * ~~merge back to SDL_master~~
