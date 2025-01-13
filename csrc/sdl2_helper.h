@@ -19,13 +19,13 @@ void s16_store( int16_t data, void* addr) { *( int16_t*)addr = data; }
 void  u8_store( uint8_t data, void* addr) { *( uint8_t*)addr = data; }
 void  s8_store(  int8_t data, void* addr) { *(  int8_t*)addr = data; }
 #include <stddef.h>
-int sizeof_char() { return sizeof(char); }
-int sizeof_short() { return sizeof(short); }
-int sizeof_size_t() { return sizeof(size_t); }
-int sizeof_int() { return sizeof(int); }
-int sizeof_float() { return sizeof(float); }
-int sizeof_double() { return sizeof(double); }
-int sizeof_pointer() { return sizeof(void *); }
+int sizeof_char(void) { return sizeof(char); }
+int sizeof_short(void) { return sizeof(short); }
+int sizeof_size_t(void) { return sizeof(size_t); }
+int sizeof_int(void) { return sizeof(int); }
+int sizeof_float(void) { return sizeof(float); }
+int sizeof_double(void) { return sizeof(double); }
+int sizeof_pointer(void) { return sizeof(void *); }
 #include <SDL2/SDL_platform.h>
 #include <SDL2/SDL_config.h>
 #include <SDL2/SDL_stdinc.h>

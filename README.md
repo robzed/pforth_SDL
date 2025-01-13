@@ -79,6 +79,7 @@ Otherwise the instructions are the same. At some point I'll get the second part 
 * ~~make sure SDL dictionary is built in as standard /or/ has enough space to import SDL2 libs and sdl2_parse.fth <<<< rebuild dictionary should have those definitions built in!!!!~~
 * ~~Long names size should be configurable (31 or 63)~~
     * ~~Optional Long name - PR back to pForth~~
+* Why is this not in SDL2 from SDL_image.fs ->  #2  constant IMG_INIT_PNG
 * float parameters, float return - allow rest of SDL functions to be used
 * Portability: Tidy up make file for Linux, homebrew
 * Portability: Fix windows build

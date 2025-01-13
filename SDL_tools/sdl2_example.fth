@@ -27,13 +27,31 @@ NULL VALUE MessageTexture
 CREATE Message_rect SDL_Rect ALLOT
 CREATE White SDL_Color ALLOT
 
+CREATE event SDL_Event ALLOT
 
+\
 \ Words
+\
+: cleanup-events ( -- )
+    ." Waiting for events for 0.1 s" cr
+    100 0 do
+        event SDL_PollEvent if
+            event SDL_Event-type u32@
+            ." <<event type =" . cr
+        then
+        1 sdl_delay
+    loop
+    ." DONE - Waiting for events for 0.1 s" cr
+    \ SDL_GetTicks64
+;
+
 : game-cleanup ( -- )
     renderer if renderer SDL_DestroyRenderer THEN
     NULL TO renderer
     window if window SDL_DestroyWindow then
     NULL TO window
+
+    \ cleanup-events
 
     TTF_Quit
     SDL_Quit
@@ -41,7 +59,7 @@ CREATE White SDL_Color ALLOT
 
 : c-str-len ( c-addr -- c-addr u ) 0 BEGIN 2DUP + C@ WHILE 1+ REPEAT ;
 
-: SDL_error ( c-addr u -- )
+: .SDL_error ( c-addr u -- )
     ." Error: " type cr
     SDL_GetError c-str-len type space cr
     1 TO exit-value
@@ -50,22 +68,22 @@ CREATE White SDL_Color ALLOT
 
 : initialize-sdl ( -- )
     SDL_FLAGS SDL_Init IF
-        ." Error initializing SDL: " SDL_error
+        ." Error initializing SDL: " .SDL_error
     THEN
 
     WINDOW_TITLE SDL_WINDOWPOS_CENTERED SDL_WINDOWPOS_CENTERED WINDOW_WIDTH WINDOW_HEIGHT 0
     SDL_CreateWindow TO window
     window 0= IF 
-        ." Error creating Window: " SDL_error
+        ." Error creating Window: " .SDL_error
     THEN
 
     window -1 0 SDL_CreateRenderer TO renderer
     renderer 0= IF
-        ." Error creating Renderer: " SDL_error
+        ." Error creating Renderer: " .SDL_error
     THEN
 
    TTF_Init IF
-        S" Error initializing SDL_ttf: " SDL_error
+        S" Error initializing SDL_ttf: " .SDL_error
     THEN
 ;
 
@@ -78,7 +96,6 @@ CREATE White SDL_Color ALLOT
     THEN
 ;
 
-CREATE event SDL_Event ALLOT
 
 : do-game-loop
     ." Start do-game-loop" cr
