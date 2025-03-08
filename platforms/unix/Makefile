@@ -29,9 +29,10 @@ ifndef WIDTHOPT
   WIDTHOPT=
 endif
 ifndef IO_SOURCE
+  # for POSIX systems:
   IO_SOURCE = pf_io_posix.c pf_fileio_stdio.c
-  #IO_SOURCE = pf_io_stdio.c
-  #            TODO: add demo what else is needed for this to work
+  # for generic / any system supporting stdio:
+  #   IO_SOURCE = pf_io_stdio.c pf_fileio_stdio.c
 endif
 
 SRCDIR       = ../..
@@ -172,6 +173,7 @@ test: $(PFORTHAPP)
 	cd $(FTHDIR) && $(BUILDDIR)/$(PFORTHAPP) -q t_alloc.fth
 	cd $(FTHDIR) && $(BUILDDIR)/$(PFORTHAPP) -q t_floats.fth
 	cd $(FTHDIR) && $(BUILDDIR)/$(PFORTHAPP) -q t_file.fth
+	cd $(FTHDIR) && $(BUILDDIR)/$(PFORTHAPP) -q t_include.fth
 	@echo "PForth Tests PASSED"
 
 clean:
